@@ -63,8 +63,18 @@ This package has two main pieces:
 
 ### Gender Classifier
 
-This is the main package and is used for inputting names and generating a list of genders
+This is the main package and is used for inputting names and generating a list of genders.  The package takes up to three inputs:
 
+* An array of names
+* A model name
+* A vector model name
+
+The final output will be an array with the name and gender classification for that name, either a 0 (Female) or 1 (Male).
+
+The array of names takes names in the following format:
+
+Single - ['Matt']
+Multiple Names - ['Elizabeth', 'Barbara'] (There is no limit on lenght)
 
 ## Version
 
