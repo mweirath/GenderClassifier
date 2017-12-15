@@ -24,7 +24,7 @@ The following is a list of all packages necessary to create a new model
 
 ## Explanation of Model
 
-The model is trained using a list of names from the Social Security Administration (SSA).  This data exists going back to 1880 and is publicly available at the following link (https://www.ssa.gov/oact/babynames/limits.html).  Due to more recent shifts in the usage of names (i.e. in 1900 Leslie was prodominantly a male name, now it is prodominantly a female name), the default model was trained using data from 1960 to 2016.   A variety of models were experimented with on with different features and combinations of features including:
+The model is trained using a list of birth names from the Social Security Administration (SSA).  This data exists going back to 1880 and is publicly available at the following link (https://www.ssa.gov/oact/babynames/limits.html).  Due to more recent shifts in the usage of names (i.e. in 1900 Leslie was prodominantly a male name, now it is prodominantly a female name), the default model was trained using data from 1960 to 2016.   A variety of models were experimented with on with different features and combinations of features including:
 
 * Word vectorization
 * Word vectorization using first 3 characters
@@ -46,8 +46,25 @@ Additionally a variety of Sci Kit Learn's classification techniques were used, i
 * GaussianNB
 * LinearSVC
 * RandomForestClassifier
+* SVM
+
+Ultimately the final model used Bigram Character Vectorization and a Random Forest Classifier.  This combination had a good balance of time to create when building new models, as well as generalizing well to unseen names.  
+
+### Notes about the model and dataset
+
+The model was built using lists of names in the US.  Although the US is very representative of many nations and cultures some names may have unique combinations of characters that are representative of different genders and be classified incorrectly.  Additionally, the SSA dataset removes any cases where there were less than 5 names in a given year.  Finally, the model is likely to classify names based on the prodominant representation in the population. 
 
 ## Using the Package
+
+This package has two main pieces:
+
+* The Gender Classifier Package (Gender_Classifier.py)
+* The Gender Model Creator Package (Gender_Model_Refresh.py)
+
+### Gender Classifier
+
+This is the main package and is used for inputting names and generating a list of genders
+
 
 ## Version
 
