@@ -68,7 +68,7 @@ from Gender_Classifier import genderclf
 ```
 
 ```
-from Gender_Classifer import updatemodel
+from Gender_Classifier import updatemodel
 ```
 
 ### Gender Classifier
