@@ -58,10 +58,24 @@ The model was built using lists of names in the US.  Although the US is very rep
 
 This package has two main pieces:
 
-* The Gender Classifier Package (Gender_Classifier.py)
-* The Gender Model Creator Package (Gender_Model_Refresh.py)
+* The Gender Classifier function (genderclf)
+* The Gender Model Creator function (updatemodel)
+
+The models can be called using the following lines of code: 
+
+```
+from Gender_Classifier import genderclf
+```
+
+```
+from Gender_Classifer import updatemodel
+```
 
 ### Gender Classifier
+
+```
+genderclf(*args, model='genderclf.pkl', vec='gendervec.pkl')
+```
 
 This is the main package and is used for inputting names and generating a list of genders.  The package takes up to three inputs:  
 
@@ -81,14 +95,32 @@ The model name and vector model names are option variables.  If left blank the m
 
 ### Gender Model Creator
 
-This package is used to create a new model using specfic year ranges.  
+```
+updatedmodel(begindate=1960, enddate=2016, modelname='newmodel')
+```
+
+This package is used to create a new model using specfic year ranges.  This package takes up to three inputs 
 
 * A begin year
 * An end year
 * A new model name
 
 ** Please notes that all values have a default and if this is run without setting values a model will be created using dates from 1960 - 2016.  This will be the same model as the default model that comes with the package.
+** Also this package will download files and create a new model which will take up approximately 100mb of space
 
+Begindate must be between 1880-2015 and Enddate must be between 1881-2016.  The Begindate must also be before the Enddate.
+
+Once started the model will do the following:
+
+* Download and unzip the SSA names files from the SSA
+* Remove unused years from the training process
+* Build a Bigram character vectorizer based on the data set
+* Train the model
+* Produce an accuracy rating based on the trained dataset
+* Pickle the vectorizer and model
+* Provide file names for vectorizer and model for use in the classifier
+
+** Please note that based on your internet connection, processing speed, the number of years selected this process can take between 5-30 minutes to complete.  
 
 ## Version
 
