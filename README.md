@@ -63,7 +63,7 @@ This package has two main pieces:
 
 ### Gender Classifier
 
-This is the main package and is used for inputting names and generating a list of genders.  The package takes up to three inputs:
+This is the main package and is used for inputting names and generating a list of genders.  The package takes up to three inputs:  
 
 * An array of names
 * A model name
@@ -74,7 +74,21 @@ The final output will be an array with the name and gender classification for th
 The array of names takes names in the following format:
 
 Single - ['Matt']
-Multiple Names - ['Elizabeth', 'Barbara'] (There is no limit on lenght)
+
+Multiple Names - ['Elizabeth', 'Barbara'] (There is no limit on length)
+
+The model name and vector model names are option variables.  If left blank the model will default to the pickled models named genderclf.pkl and gendervec.pkl. These models are trained on data from 1960 - 2016 and have an approximate 90% accuracy on that data set.  If you create a new model using the Gender_Model_Refresh package new names will be provided that can be used for the model and vectorization.
+
+### Gender Model Creator
+
+This package is used to create a new model using specfic year ranges.  
+
+* A begin year
+* An end year
+* A new model name
+
+** Please notes that all values have a default and if this is run without setting values a model will be created using dates from 1960 - 2016.  This will be the same model as the default model that comes with the package.
+
 
 ## Version
 
