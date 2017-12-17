@@ -30,36 +30,36 @@ Navigate your python installation to the file location
 
 Import the Gender Classifier using the following code:
 
-'''
+```
 from Gender_Classifier import genderclf
-'''
+```
 
 Then you can imput names into the classifier as so:
 
-'''
+```
 genderclf(['Alexander'])
-'''
+```
 
 Which will return an array, where Alexander was classified as "1", indicating a male name.
 
-'''
+```
 array([['Alexander', '1']],
       dtype='<U21')
-'''
+```
 
 You can also submit multiple names at one time:
 
-'''
+```
 genderclf(['Alexander', 'Alexandria'])
-'''
+```
 
 Here Alexander was classified as male (1) and Alexandria was classified as a female (0)
 
-'''
+```
 array([['Alexander', '1'],
        ['Alexandria', '0']],
       dtype='<U21')
-'''
+```
 
 ## Explanation of Model
 
