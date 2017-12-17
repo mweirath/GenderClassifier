@@ -61,6 +61,8 @@ array([['Alexander', '1'],
       dtype='<U21')
 ```
 
+For more details on creating and using new models for gender predictions proceed down to the "Using this package" section
+
 ## Explanation of Model
 
 The model is trained using a list of birth names from the Social Security Administration (SSA).  This data exists going back to 1880 and is publicly available at the following link (https://www.ssa.gov/oact/babynames/limits.html).  Due to more recent shifts in the usage of names (i.e. in 1900 Leslie was prodominantly a male name, now it is prodominantly a female name), the default model was trained using data from 1960 to 2016.   A variety of models were experimented with on with different features and combinations of features including:
