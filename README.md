@@ -124,5 +124,9 @@ Once started the model will do the following:
 
 ## Version
 
+0.1 - 12/17/2017
+
 ## Author
+
+Matthew Weirath
 
