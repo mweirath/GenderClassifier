@@ -22,6 +22,45 @@ The following is a list of all packages necessary to create a new model
 * string
 * pickle
 
+## Getting Started
+
+To get started you will need to download Gender_Classifier.py and GenderClfModelAndVec.zip to whatever folder you will be working from.  You will then need to unzip the GenderClfModelAndVec.zip into that same folder. 
+
+Navigate your python installation to the file location
+
+Import the Gender Classifier using the following code:
+
+'''
+from Gender_Classifier import genderclf
+'''
+
+Then you can imput names into the classifier as so:
+
+'''
+genderclf(['Alexander'])
+'''
+
+Which will return an array, where Alexander was classified as "1", indicating a male name.
+
+'''
+array([['Alexander', '1']],
+      dtype='<U21')
+'''
+
+You can also submit multiple names at one time:
+
+'''
+genderclf(['Alexander', 'Alexandria'])
+'''
+
+Here Alexander was classified as male (1) and Alexandria was classified as a female (0)
+
+'''
+array([['Alexander', '1'],
+       ['Alexandria', '0']],
+      dtype='<U21')
+'''
+
 ## Explanation of Model
 
 The model is trained using a list of birth names from the Social Security Administration (SSA).  This data exists going back to 1880 and is publicly available at the following link (https://www.ssa.gov/oact/babynames/limits.html).  Due to more recent shifts in the usage of names (i.e. in 1900 Leslie was prodominantly a male name, now it is prodominantly a female name), the default model was trained using data from 1960 to 2016.   A variety of models were experimented with on with different features and combinations of features including:
