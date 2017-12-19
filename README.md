@@ -34,7 +34,7 @@ Import the Gender Classifier using the following code:
 from Gender_Classifier import genderclf
 ```
 
-Then you can imput names into the classifier as so:
+Then you can input names into the classifier as so:
 
 ```
 genderclf(['Alexander'])
@@ -65,7 +65,7 @@ For more details on creating and using new models for gender predictions proceed
 
 ## Explanation of Model
 
-The model is trained using a list of birth names from the Social Security Administration (SSA).  This data exists going back to 1880 and is publicly available at the following link (https://www.ssa.gov/oact/babynames/limits.html).  Due to more recent shifts in the usage of names (i.e. in 1900 Leslie was prodominantly a male name, now it is prodominantly a female name), the default model was trained using data from 1960 to 2016.   A variety of models were experimented with on with different features and combinations of features including:
+The model is trained using a list of birth names from the Social Security Administration (SSA).  This data exists going back to 1880 and is publicly available at the following link (https://www.ssa.gov/oact/babynames/limits.html).  Due to more recent shifts in the usage of names (i.e. in 1900 Leslie was predominantly a male name, now it is predominantly a female name), the default model was trained using data from 1960 to 2016.   A variety of models were experimented with on with different features and combinations of features including:
 
 * Word vectorization
 * Word vectorization using first 3 characters
@@ -77,7 +77,7 @@ The model is trained using a list of birth names from the Social Security Admini
 * Bigram character vectorization
 * Trigram character vectorization
 
-Additionally a variety of Sci Kit Learn's classification techniques were used, including:
+Additionally, a variety of Sci-Kit Learn's classification techniques were used, including:
 
 * MultinomialNB
 * BernoulliNB
@@ -93,7 +93,7 @@ Ultimately the final model used Bigram Character Vectorization and a Random Fore
 
 ### Notes about the model and dataset
 
-The model was built using lists of names in the US.  Although the US is very representative of many nations and cultures some names may have unique combinations of characters that are representative of different genders and be classified incorrectly.  Additionally, the SSA dataset removes any cases where there were less than 5 names in a given year.  Finally, the model is likely to classify names based on the prodominant representation in the population. 
+The model was built using lists of names in the US.  Although the US is very representative of many nations and cultures some names may have unique combinations of characters that are representative of different genders and be classified incorrectly.  Additionally, the SSA dataset removes any cases where there were less than 5 names in a given year.  Finally, the model is likely to classify names based on the predominant representation in the population. 
 
 ## Using the Package
 
@@ -140,7 +140,7 @@ The model name and vector model names are option variables.  If left blank the m
 updatedmodel(begindate=1960, enddate=2016, modelname='newmodel')
 ```
 
-This package is used to create a new model using specfic year ranges.  This package takes up to three inputs 
+This package is used to create a new model using specific year ranges.  This package takes up to three inputs 
 
 * A begin year
 * An end year
